@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RMG-nf-mVo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reverse Words-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ReverseWordsViewController" customModule="reverseWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exM-vv-IKc">
+                                <rect key="frame" x="102.5" y="121" width="209" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words.Please type text below " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kF4-u1-aiC">
+                                <rect key="frame" x="29" y="198" width="356" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZh-d2-5WO">
+                                <rect key="frame" x="29" y="298.5" width="356" height="28.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQP-gB-aQO" customClass="MyButton" customModule="reverseWords" customModuleProvider="target">
+                                <rect key="frame" x="29" y="801" width="356" height="42"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="iPh-sX-iIT"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reverse"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="reverseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfc-VN-pmC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic symbols" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fen-PL-HOm">
+                                <rect key="frame" x="29" y="371" width="356" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Sdj-BH-mPz">
+                                <rect key="frame" x="102" y="332" width="210" height="32"/>
+                                <segments>
+                                    <segment title="Default"/>
+                                    <segment title="Custom"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangeSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="pb2-jj-bGp"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PvQ-Fg-fFB">
+                                <rect key="frame" x="29" y="410" width="356" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="lowTextFieldAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="12p-e3-ejM"/>
+                                </connections>
+                            </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ukk-z8-11F">
+                                <rect key="frame" x="29" y="452" width="356" height="335"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="seR-ND-dGa">
+                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="128"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9J-YO-Dfd">
+                                                <rect key="frame" x="0.0" y="30" width="356" height="39"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="linkColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1000" id="lWC-px-WJM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="seR-ND-dGa" secondAttribute="trailing" id="1K4-EQ-cD3"/>
+                                    <constraint firstItem="seR-ND-dGa" firstAttribute="leading" secondItem="Ukk-z8-11F" secondAttribute="leading" id="EFk-g3-ZaN"/>
+                                    <constraint firstItem="seR-ND-dGa" firstAttribute="top" secondItem="Ukk-z8-11F" secondAttribute="top" id="MTe-vk-eBi"/>
+                                    <constraint firstAttribute="bottom" secondItem="seR-ND-dGa" secondAttribute="bottom" id="Vmx-6k-Jnk"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="hit-pw-E04"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="VyD-Wd-Oa7"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jZh-d2-5WO" secondAttribute="trailing" constant="29" id="0Ch-Xf-eG7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fen-PL-HOm" secondAttribute="trailing" constant="29" id="4Ea-Ys-vR0"/>
+                            <constraint firstItem="exM-vv-IKc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5qg-jO-pZy"/>
+                            <constraint firstItem="Sdj-BH-mPz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="8mt-3k-Beu"/>
+                            <constraint firstItem="kF4-u1-aiC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="Arb-3v-Gys"/>
+                            <constraint firstItem="fen-PL-HOm" firstAttribute="top" secondItem="Sdj-BH-mPz" secondAttribute="bottom" constant="8" symbolic="YES" id="E9C-TL-1gH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ukk-z8-11F" secondAttribute="trailing" constant="29" id="Eav-6c-P1L"/>
+                            <constraint firstItem="fen-PL-HOm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="Gyq-EP-F0k"/>
+                            <constraint firstItem="Sdj-BH-mPz" firstAttribute="top" secondItem="jZh-d2-5WO" secondAttribute="bottom" constant="5" id="IX5-jg-9BW"/>
+                            <constraint firstItem="OQP-gB-aQO" firstAttribute="top" secondItem="Ukk-z8-11F" secondAttribute="bottom" constant="14" id="Psx-fd-RT6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sdj-BH-mPz" secondAttribute="trailing" constant="102" id="Whm-L2-xan"/>
+                            <constraint firstItem="Ukk-z8-11F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="Zm0-VF-dKV"/>
+                            <constraint firstItem="OQP-gB-aQO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="aai-Lk-qgE"/>
+                            <constraint firstItem="PvQ-Fg-fFB" firstAttribute="top" secondItem="fen-PL-HOm" secondAttribute="bottom" constant="18.5" id="c85-VZ-DkL"/>
+                            <constraint firstItem="kF4-u1-aiC" firstAttribute="top" secondItem="exM-vv-IKc" secondAttribute="bottom" constant="41" id="eVv-ey-4cl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OQP-gB-aQO" secondAttribute="bottom" constant="19" id="fBb-8p-961"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kF4-u1-aiC" secondAttribute="trailing" constant="29" id="jkR-YP-xEa"/>
+                            <constraint firstItem="jZh-d2-5WO" firstAttribute="top" secondItem="kF4-u1-aiC" secondAttribute="bottom" constant="47.5" id="kFT-ju-bHU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OQP-gB-aQO" secondAttribute="trailing" constant="29" id="rWM-CE-c8a"/>
+                            <constraint firstItem="exM-vv-IKc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="vLm-Fd-uPv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PvQ-Fg-fFB" secondAttribute="trailing" constant="29" id="vNe-Zn-J0N"/>
+                            <constraint firstItem="PvQ-Fg-fFB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="vhy-Jc-8jc"/>
+                            <constraint firstItem="jZh-d2-5WO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="xaD-yB-M00"/>
+                            <constraint firstItem="Ukk-z8-11F" firstAttribute="top" secondItem="PvQ-Fg-fFB" secondAttribute="bottom" constant="8" symbolic="YES" id="zvJ-p9-hS7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reverse Words" id="aU5-VH-3fc"/>
+                    <connections>
+                        <outlet property="bottomGrayLabel" destination="fen-PL-HOm" id="zwV-Ab-mE8"/>
+                        <outlet property="bottomTextField" destination="PvQ-Fg-fFB" id="EWH-66-uF5"/>
+                        <outlet property="mainScrollView" destination="Ukk-z8-11F" id="vXh-CR-QRG"/>
+                        <outlet property="mainTextField" destination="jZh-d2-5WO" id="hAP-F0-XgY"/>
+                        <outlet property="reverseButton" destination="OQP-gB-aQO" id="0nL-Uf-gwa"/>
+                        <outlet property="reversedLabel" destination="C9J-YO-Dfd" id="ALF-DP-po7"/>
+                        <outlet property="segmentedControl" destination="Sdj-BH-mPz" id="Jx0-VT-8b8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="82"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VBp-OU-hjx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RMG-nf-mVo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1OI-j2-bsm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fPu-ta-PYs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hI-rY-x1k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-468" y="82"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="OQP-gB-aQO">
+            <size key="intrinsicContentSize" width="76" height="31"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
